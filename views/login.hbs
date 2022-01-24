@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="split left">
+        <div class="centered">
+            <div class=" login-left">
+                <h1 class="bigHeader">LOGIN</h1>
+
+                <form method="POST">
+                    <div class="mt-5 mb-4">
+                        <input name="username" placeholder="Enter username" class="input-field form-control rounded-0">
+                    </div>
+
+
+
+                    <div class="mb-4 password inner-addon right-addon">
+                        <i class="bi bi-eye-slash" id="togglePassword"></i>
+
+                        <input name="password" placeholder="Enter password" class="input-field form-control rounded-0"
+                            type="password" id="password">
+
+
+
+                    </div>
+                    <div>
+
+                        <input name="login" value="Log In" type="submit" class="btn btn-outline-primary rounded-0">
+
+                        {{!-- <input name="register" value="Register" type="submit"
+                            class="btn btn-outline-primary rounded-0"> --}}
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="split right">
+        <div class="centered">
+
+            <img id="circuit" src="/images/Ryerson.svg" alt="RCLBSLogo">
+            <h1 class="login-title-rye">RYERSON</h1>
+            <h2 class="login-title-clbs">COMPUTER LAB</h2>
+            <h2 class="login-title-clbs">BOOKING SYSTEM</h2>
+            <div class=" login-right"></div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/login.js"></script>

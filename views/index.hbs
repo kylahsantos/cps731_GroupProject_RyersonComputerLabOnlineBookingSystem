@@ -1,0 +1,83 @@
+<div class="header">{{>navbar}}</div>
+<div class="container bookTime">
+    <div class="row">
+        <div class="col">
+            <div class="yourbookings align-self-center">
+                <span id="">Your</span>
+                <br>
+                <spand id="">Bookings</span>
+            </div>
+            {{!-- <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>booking_id</th>
+                        <th>bookingDate</th>
+                        <th>timeIn</th>
+                        <th>timeOut</th>
+                        <th>numberOfHours</th>
+                        <th>computer_id</th>
+                        <th>room_id</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each studentBookingsCollectionIndex}}
+                    <tr>
+                        <td>{{this.booking_id}}</td>
+                        <td class="bookinDate">{{this.bookingDate}}</td>
+                        <td class="timeIn">{{this.timeIn}}</td>
+                        <td class="timeOut">{{this.timeOut}}</td>
+                        <td>{{this.numberOfHours}}</td>
+                        <td>{{this.computer_id}}</td>
+                        <td>{{this.room_id}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table> --}}
+            {{#each studentBookingsCollectionIndex}}
+
+            <div class="card" style="width: auto;">
+                <div class="card-body">
+                    <p class="card-title bookinDatenoYear">{{this.bookingDate}}</p>
+                    <p class="card-text card-roomid"><span class="text-roomid">{{this.room_id}}</span> |  
+                    <span class="text-compid">{{this.computer_id}}</span>
+                    </p> 
+                    <p class="card-text card-time">
+                    <span class="timeIn">{{this.timeIn}}</span> - 
+                    <span class="timeOut">{{this.timeOut}}</span>
+                    </p> 
+                    <p class="card-subtitle text-muted card-id">Booking ID: {{this.booking_id}}</p>
+
+
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+        <div class="col  rightsideHome">
+            <div class="stats">
+                <h1 id="helloUser">Hello, {{ loggedInUser }}</h1>
+
+                <span class="fontforHome ">
+                    Hours Booked: {{bookedHours}}
+                </span>
+                <br>
+                <span class="fontforHome ">
+                    Remaining Hours: {{remainingHours}}
+                </span>
+            </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btnforHome" name="bookbtn" onClick="location.href='/calendar'">
+                    <span class="fontforHome">Book</span>
+                </button>
+                <button type="button" class="btn btnforHome" name="cancelbtn"
+                    onClick="location.href='/studentBookings'">
+                    <span class="fontforHome">Cancel</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="/javascripts/admin-bookings.js"></script>
+<script src="/javascripts/student-bookings.js"></script>

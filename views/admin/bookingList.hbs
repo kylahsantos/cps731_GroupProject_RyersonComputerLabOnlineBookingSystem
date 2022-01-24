@@ -1,0 +1,60 @@
+{{!--
+<link rel="stylesheet" href="../stylesheets/style.css"> I don't think this is needed?--}}
+<div class="header">{{>adminnavbar}}</div>
+<div class="titles" id="titles">
+    <center>
+        <h1>ADMIN Dashboard</h1>
+        <h2> Welcome {{ user }}!</h2>
+    </center>
+</div>
+<section class="showcase">
+    <div class="container">
+        <div class="pb-2 mt-4 mb-2 border-bottom">
+            <h2>Bookings <a class="btn btn-outline-secondary float-right btn-sm" href="admin/addupdateBooking"><i
+                        class="fa fa-plus"></i> Create New</a></h2>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped bookingsTable">
+                    <thead>
+                        <tr>
+                            <th>Booking ID</th>
+                            <th>Reserved For</th>
+                            <th>Booking Date</th>
+                            <th>Time In</th>
+                            <th>Time Out</th>
+                            <th># of Hours</th>
+                            <th>ComputerID</th>
+                            <th id="roomId">RoomID</th>
+                            <th>Booking Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each bookingList}}
+                        <tr>
+                            <td>{{this.booking_id}}</td>
+                            <td>{{this.reservedFor}}</td>
+                            <td class="bookinDate">{{this.bookingDate}}</td>
+                            <td class="timeIn">{{this.timeIn}}</td>
+                            <td class="timeOut">{{this.timeOut}}</td>
+                            <td>{{this.numberOfHours}}</td>
+                            <td>{{this.computer_id}}</td>
+                            <td>{{this.room_id}}</td>
+                            <td>{{this.bookingStatus}}</td>
+                            <td>
+                                <a href="/admin/{{this._id}}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+                                <a href="/admin/delete/{{this._id}}"
+                                    onclick="return confirm('Are you sure to delete this record ?');"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/javascripts/admin-bookings.js"></script>

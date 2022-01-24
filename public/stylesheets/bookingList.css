@@ -1,0 +1,22 @@
+th {
+    width: 12%; 
+}
+
+#roomId{
+    width: 6%;
+}
+
+.btn-info{
+    background-color: #C9641E;
+        color: white;
+        border-color: white;
+
+}
+.btn-info:hover{
+   background-color: #B0591A;
+   color: white;
+   border-color: white;
+}
+.btn-info:focus {
+    box-shadow: none;
+}

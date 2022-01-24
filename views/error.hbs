@@ -1,0 +1,17 @@
+<div class="header">{{>navbar}}</div>
+<div class="container-fluid errorRow">
+    <div class="row">
+        <div class="col d-flex justify-content-center">
+            <img id="cryingEmote" src="/images/crying_acnh_noshape.png" alt="Crying">
+        </div>
+        <div class="col rightError">
+            <h1 class="errorTitle error-text"> Whoops! An error has occurred.</h1>
+            <h2 class="errorMessage error-text">{{message}}</h2>
+            <h2>{{error.status}}</h2>
+            {{!-- <pre>{{error.stack}}</pre> --}}
+            <button type="button" class="btn error-button" name="bookbtn" onClick="location.href='/'">
+                <span class="fontforHome">Return to Homepage</span>
+            </button>
+        </div>
+    </div>
+</div>

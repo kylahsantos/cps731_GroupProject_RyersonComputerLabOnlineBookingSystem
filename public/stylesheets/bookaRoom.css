@@ -1,0 +1,101 @@
+.bookTime {
+    height: 100vh;
+}
+
+.choosetimeHeader {
+    margin-top: 15%;
+}
+
+.availableCompsText{
+    padding-left: 80px;
+    padding-bottom: 50px;
+}
+
+.labRooms{
+    padding-top: 0px;
+}
+
+.BookingExists{
+    pointer-events: none;
+}
+
+#choosetimeslot {
+    width: 387px;
+    height: 177px;
+    padding-bottom: 7%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 63px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+#datePicked{
+    width: 387px;
+    height: 177px;
+    padding-bottom: 7%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 63px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.dropdown {
+    width: 390px;
+    height: 135px;
+}
+
+#timedropdown {
+    font-size: 24px;
+    border-radius: 0.5rem;
+}
+
+.rightside {
+    margin-top: 5%;
+}
+
+.room {
+    margin: 5%;
+    height: 128px;
+}
+
+.line-1 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 63px;
+
+}
+
+.line-2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height */
+
+
+}
+
+.btn-outline-secondary:hover {
+    color: var(--ryeyellow);
+    background-color: var(--ryeblue);
+    border-color: none;
+}
+
+.btn-outline-secondary {
+    color: var(--ryeblue);
+    background-color: white;
+    border-color: var(--ryeblue);
+}
+
+.btn-outline-secondary:focus {
+    box-shadow: none;
+}

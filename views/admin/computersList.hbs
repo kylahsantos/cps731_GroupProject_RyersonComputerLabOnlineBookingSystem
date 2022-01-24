@@ -1,0 +1,30 @@
+<div class="header">{{>adminnavbar}}</div>
+
+<div class="titles" id="titles">
+    <center>
+    <h1>ADMIN Dashboard</h1>
+    <h2> Welcome {{ user }}!</h2>
+    </center>
+</div>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Room ID</th>
+                <th>Computer ID</th>
+                <th>isAvailable</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each computersCollection}}
+            <tr>
+                <td>{{this.room_id}}</td>
+                <td>{{this.computer_id}}</td>
+                <td>{{this.isAvailable}}</td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+</div>

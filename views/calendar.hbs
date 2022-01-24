@@ -1,0 +1,30 @@
+<div class="header">{{>navbar}}</div>
+<div class="monthHeader">
+  <button type="button" onClick="change('left')" class="btn btn-outline-dark"> <i class="fas fa-chevron-left fa-3x"></i></button>
+
+
+  <h1 id="month"></h1>
+  <button type="button" onClick="change('right')"class="btn btn-outline-dark"> <i class="fas fa-chevron-right fa-3x"></i></button>
+
+</div>
+
+<div id="app-calendar1">
+    <form method="POST">
+      <div class="daysinMonth" id="app-calendar">
+      </div>
+      <input id="day_selected" style="display: none;" name="day_selected"/>
+      <center>
+        <span id="day_selected"></span>
+        <input id="datePicked" style="display: none;" name="datePicked" />
+        <input id="submitButton" name="submitButtonCalendar" type="submit" class="btn btn-outline-primary rounded-0">
+      </center>
+  </form>
+</div>
+
+<script src="/javascripts/calendar.js"></script>
+
+{{!-- <div id="hidden-form-calendar" style ="display:none;">
+      <form name="calendar" method="post">
+        <input type="submit" name="submit" value="booked-day">
+    </form>
+</div> --}}

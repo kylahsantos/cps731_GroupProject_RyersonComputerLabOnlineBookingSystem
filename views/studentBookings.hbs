@@ -1,0 +1,52 @@
+<div class="header">{{>navbar}}</div>
+<div class="container bookTime">
+    <div class="row">
+        <div class="col">
+            <div class="yourbookings align-self-center">
+                <span id="">Your Bookings</span>
+            </div>
+            <section class="showcase">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>booking_id</th>
+                            <th>reservedFor</th>
+                            <th>bookingDate</th>
+                            <th>timeIn</th>
+                            <th>timeOut</th>
+                            <th>numberOfHours</th>
+                            <th>computer_id</th>
+                            <th>room_id</th>
+                            <th>bookingStatus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each studentBookingsCollection}}
+                        <tr>
+                            <td>{{this.booking_id}}</td>
+                            <td>{{this.reservedFor}}</td>
+                            <td class="bookinDate">{{this.bookingDate}}</td>
+                            <td class="timeIn">{{this.timeIn}}</td>
+                            <td class="timeOut">{{this.timeOut}}</td>
+                            <td>{{this.numberOfHours}}</td>
+                            <td>{{this.computer_id}}</td>
+                            <td>{{this.room_id}}</td>
+                            <td>{{this.bookingStatus}}</td>
+                            <td>
+                                <a href="/student/delete/{{this._id}}"
+                                    onclick="return confirm('Are you sure to delete this record ?');"><i
+                                        class="fa fa-trash" aria-hidden="true"></i></a>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>	
+
+<script src="/javascripts/admin-bookings.js"></script>

@@ -1,0 +1,213 @@
+.containerCompRoom {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 36px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Room-1 Room-1 Showing-Available Showing-Available"
+        "Comp1 Comp2 Comp3 Comp4"
+        "Comp5 Comp6 Comp7 Comp8"
+        "ComputerInfo Book-this-Computer-Until Book-this-Computer-Until Confirm-Button";
+    padding-left: 4%;
+    padding-right: 4%;
+    place-items: stretch;
+    border: lightgray;
+    height: 80vh;
+}
+
+.header-1 {
+    background-color: var(--light-gray);
+
+}
+
+.grid-item-cent {
+    background-color: var(--light-gray);
+}
+
+.Room-1 {
+    grid-area: Room-1;
+    /* place-self: center; */
+    /* place-items: center;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Showing-Available {
+    grid-area: Showing-Available;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-centerit{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.grid-centerit:hover{
+    color:green;
+}
+
+.Comp1 {
+    grid-area: Comp1;
+    text-align: center;
+}
+
+.Comp2 {
+    grid-area: Comp2;
+    text-align: center;
+
+}
+
+.Comp3 {
+    grid-area: Comp3;
+    text-align: center;
+
+}
+
+.Comp4 {
+    grid-area: Comp4;
+    text-align: center;
+
+}
+
+.Comp5 {
+    grid-area: Comp5;
+    text-align: center;
+
+}
+
+
+.Comp6 {
+    grid-area: Comp6;
+    text-align: center;
+
+}
+
+.Comp7 {
+    grid-area: Comp7;
+    text-align: center;
+
+}
+
+.Comp8 {
+    grid-area: Comp8;
+    text-align: center;
+
+}
+
+
+
+.ComputerInfo {
+    grid-area: ComputerInfo;
+    place-self: center;
+
+}
+
+.Book-this-Computer-Until {
+    grid-area: Book-this-Computer-Until;
+    place-self: center;
+    padding-top: 10%;
+}
+
+.bookthiscomp {
+    align-self: center;
+    justify-self: center;
+}
+
+.testing {
+    grid-area: testing;
+    place-self: center;
+    display: block;
+    width: 60%;
+}
+
+
+.Confirm-Button {
+    grid-area: Confirm-Button;
+    place-self: center;
+    display: block;
+    width: 60%;
+}
+
+#booktext {
+    margin-bottom: 5%;
+}
+
+.buttonConfirm {
+    /* display: block; */
+    width: 100%;
+    line-height: 2.5;
+    margin-top: 7%;
+    font-weight: 400;
+
+}
+
+.btn-outline-success:hover {
+    color: white;
+    background-color: #31840C;
+    border-color: none;
+}
+
+.btn-outline-success {
+    color: #31840C;
+    background-color: white;
+    border-color: #31840C;
+}
+
+.btn-outline-success:focus {
+    box-shadow: none;
+}
+
+.line-3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 65px;
+    line-height: 32px;
+    /* identical to box height */
+    margin-bottom: 10%;
+
+}
+
+.line-4 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 32px;
+    /* identical to box height */
+
+
+}
+
+.firstline {
+    margin-bottom: 4px;
+    ;
+}
+
+.fa-desktop {
+    font-size: 150px;
+}
+.selectedComp{
+    text-shadow: 0 3px 5px rgb(175, 175, 175);
+    transform: scale(1.1);
+
+    color: green;
+}
+.disabledComp {
+    color: lightgray;
+}
+
+.notAvailable{
+    color: lightgray;
+    pointer-events: none;
+}
+
+div.computer > i {
+    pointer-events: none;
+}

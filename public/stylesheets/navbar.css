@@ -1,0 +1,32 @@
+.navbar{
+    background-color: var(--ryeblue);
+    position: relative;
+    padding: 0px 0px;
+    
+}
+.nav-link:focus{
+    color: white;
+}
+.header{
+    padding: 0px 0px;
+}
+.navbar-brand{
+    color: white;
+    padding: 0px 0px;
+}
+.nvi {
+    width: 100%;
+}
+
+.nav-text{
+    color: white;
+    font-size: 24px;
+
+}
+.nav-text:hover{
+    color:var(--ryeyellow);
+}
+.nav-logout{
+    font-size: 24px; 
+    
+}

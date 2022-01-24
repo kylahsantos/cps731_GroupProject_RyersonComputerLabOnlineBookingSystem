@@ -1,0 +1,75 @@
+<div class="header">{{>navbar}}</div>
+
+<div class="containerCompRoom " id="app-comproom">
+    
+    <div class="grid-item-cent Room-1">
+        <div class="header-1">
+            <div class="firstline">
+                <span class="line-3">{{ labRoomChosen }}</span>
+            </div>
+            <br>
+            <div class="secondline">
+                <span class="line-4">{{ getComputersAvailable }} computers available</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-item-cent Showing-Available">
+        <div class="header-1">
+            <span class="line-1">Showing available</span>
+            <br>
+            <span class="line-1">Computers for: {{ timeChoseText }}</span>
+        </div>
+    </div>
+
+    <div class="Comp1 grid-centerit computer firstR {{compA}}" computerTitle="{{labRoomChosen}}_compA" id="{{labRoomChosen}}_compA" value="{{labRoomChosen}}_compA"><i class="fas fa-desktop"></i></div>
+    <div class="Comp2 grid-centerit computer firstR {{compB}}" computerTitle="{{labRoomChosen}}_compB" id="{{labRoomChosen}}_compB" value="{{labRoomChosen}}_compB"><i class="fas fa-desktop"></i></div>
+    <div class="Comp3 grid-centerit computer firstR {{compC}}" computerTitle="{{labRoomChosen}}_compC" id="{{labRoomChosen}}_compC"><i class="fas fa-desktop"></i></div>
+    <div class="Comp4 grid-centerit computer firstR {{compD}}" computerTitle="{{labRoomChosen}}_compD" id="{{labRoomChosen}}_compD"><i class="fas fa-desktop"></i></div>
+    
+    <div class="Comp5 grid-centerit computer secR {{compE}}" computerTitle="{{labRoomChosen}}_compE" id="{{labRoomChosen}}_compE"><i class="fas fa-desktop"></i></div>
+    <div class="Comp6 grid-centerit computer secR {{compF}}" computerTitle="{{labRoomChosen}}_compF" id="{{labRoomChosen}}_compF"><i class="fas fa-desktop"></i></div>
+    <div class="Comp7 grid-centerit computer secR {{compG}}" computerTitle="{{labRoomChosen}}_compG" id="{{labRoomChosen}}_compG"><i class="fas fa-desktop"></i></div>
+    <div class="Comp8 grid-centerit computer secR {{compH}}" computerTitle="{{labRoomChosen}}_compH" id="{{labRoomChosen}}_compH"><i class="fas fa-desktop"></i></div>
+    
+    <div class="ComputerInfo">
+        <span class="line-2">Computer Info</span>
+        <br>
+        <span class="line-2">Computer ID:</span><span class="line-2" id="chosenComputerID"></span>
+        <br>
+        <span class="line-2">OS: Windows</span>
+    </div>
+
+    <div class="Book-this-Computer-Until"> 
+        <div class="bookthiscomp"></div>
+        <form action="/newBooking" method="POST">
+        <input id="room_id" style="display: none;" name="room_id" value='{{labRoomChosen}}'/>
+        <input id="booking_id" style="display: none;" name="booking_id" value='{{getBookingId}}'/>
+        <input id="reservedFor" style="display: none;" name="reservedFor" value='{{loggedInUser}}'/>
+        <input id="bookingDate" style="display: none;" name="bookingDate" value='{{getPickedDay}}'/>
+        <input id="startTime" style="display: none;" name="startTime" value='{{timeChose}}'/>
+        <input id="chosenComputerIDinput" style="display: none;" name="chosenComputerID" value=''/>
+            
+        <div id="booktext" class="line-2">
+            Book this computer until:
+        </div>
+            
+        <div class="dropdown">
+            <select name="endTime" id="timedropdown" class="form-select" aria-label="Default select example" required>
+                <option value="" disabled hidden selected>Select a time...</option>
+                <option value="{{ firstHour }}">{{firstHourText}}</option>
+                <option value="{{ secondHour }}">{{secondHourText}}</option>
+            </select>
+        <div>
+    </div>    
+    </div> 
+    <div class="Confirm-Button"> 
+        <button type="button submit" class="buttonConfirm btn btn-outline-success line-2">Confirm Booking</button>
+    </div> 
+    </form>
+</div>
+
+</div>
+
+<script src="/javascripts/bookaComputer.js"></script>
+

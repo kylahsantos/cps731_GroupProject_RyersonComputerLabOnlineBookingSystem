@@ -1,0 +1,67 @@
+/*
+Ryerson Colours: 
+Blue: #035AA6
+Yellow: #F2CB05
+*/
+*{
+  font-family: 'Roboto Mono', monospace;
+}
+:root{
+  /* global variables */
+  --ryeblue: #035AA6;
+  --ryeyellow: #FFDB15;
+  --light-gray: #DADCE0;
+}
+
+body {
+  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.main-content{
+  padding:50px;
+}
+
+.input-field{
+  border: 0;
+  outline: 0;
+
+  padding: 10px;
+  box-sizing: border-box;
+  box-shadow: 0 3px 5px rgb(175, 175, 175);
+  margin-bottom: 7px;
+  align-items: center;
+
+}
+
+li {
+  list-style-type: none;
+  width: 100%;
+  display: flex;
+  box-shadow: 0 0 10px #eee;
+  background-color: white;
+  margin-bottom: 5px;
+  border: 1px solid #eee;
+
+  transition: all 100ms;
+
+}
+li:hover{
+  transform: scale(1.05);
+}
+li button {
+  background-color: black;
+  color: white;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  width: 100px;
+  cursor: pointer;
+}
+.item-text {
+  width: 100%;
+  padding: 10px;
+}
+

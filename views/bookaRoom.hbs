@@ -1,0 +1,64 @@
+<div class="header">{{>navbar}}</div>
+
+<div class="container bookTime">
+    <div class="row">
+
+        <div class="col">
+            <div class="choosetimeHeader align-self-center">
+                <h3 id="datePicked"> Available Bookings for <br> {{ getPickedDay }}</h1>
+                <h1 id="choosetimeslot">Choose your time slot:</h1>
+            </div>
+            <form action="/timeChosen" method="POST">
+            <div class="dropdown">
+                <select name="timeChoice" id="timedropdown" required class="form-select" aria-label="Default select example">
+                    <option value="" disabled hidden selected>Select a time...</option>
+                    <option value="1">8:00AM</option>
+                    <option value="2">9:00AM</option>
+                    <option value="3">10:00AM</option>
+                    <option value="4">11:00AM</option>
+                    <option value="5">12:00AM</option>
+                    <option value="6">1:00PM</option>
+                    <option value="7">2:00PM</option>
+                    <option value="8">3:00PM</option>
+                    <option value="9">4:00PM</option>
+                    <option value="10">5:00PM</option>
+                    <option value="11">6:00PM</option>
+                </select>
+                <br>
+                <center>
+                    <input class="btn btn-outline-primary rounded-0" type="submit">
+                </center>
+            </div>
+            </form>
+        </div>
+
+        <div class="labRooms col btn-group-vertical rightside">
+            <form class="labRooms col btn-group-vertical rightside" action="/labRoomChoice" method="POST">
+                <div class="availableCompsText">
+                    <center>
+                        <h3>Showing Available Computers for {{ timeText }}</h3>
+                        <h3>{{ message }}</h3>
+                    </center>
+                </div>
+                <input id="getPickedDay" style="display: none;" name="getPickedDay" value='{{getPickedDay}}'/>
+                <input id="timeChoice" style="display: none;" name="timeChoice" value='{{estTime}}'/>
+                <button type="button submit" class="btn btn-outline-secondary room {{checkBookingExists}}" name="labRoomChosen" value="room1">
+                    <span class="line-1">ROOM 1</span>
+                    <br>
+                    <span class="line-2">{{ roomOne }} computers available</span>
+                </button>
+                <button type="button submit" class="btn btn-outline-secondary room {{checkBookingExists}}" name="labRoomChosen" value="room2" >
+                    <span class="line-1">ROOM 2</span>
+                    <br>
+                    <span class="line-2">{{ roomTwo }} computers available</span>
+                </button>
+                <button type="button submit" class="btn btn-outline-secondary room {{checkBookingExists}}" name="labRoomChosen" value="room3">
+                    <span class="line-1">ROOM 3</span>
+                    <br>
+                    <span class="line-2">{{ roomThree }} computers available</span>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

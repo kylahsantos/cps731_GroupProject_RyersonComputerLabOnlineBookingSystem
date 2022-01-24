@@ -1,0 +1,90 @@
+.bigHeader{
+    font-size: 96px;
+    text-align: left;
+    margin-top: 7%;
+   
+  }
+  .btn-outline-primary:hover{
+    color:black;
+    background-color: white;
+    border-color:none;
+  }
+  .btn-outline-primary{
+    color: white;
+    background-color: var(--ryeblue);
+    border-color: var(--ryeblue);
+  }
+  .btn-outline-primary:focus{
+    box-shadow: none;
+  }
+  .split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #fff;
+  }
+  
+  .right {
+    right: 0;
+    background-color: var(--ryeyellow);  }
+  
+  .centered {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  #circuit{
+    width: 300px;
+  }
+  
+  .login-title-rye{ 
+    margin-top: 2%;
+    font-size: 90px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--ryeblue);
+  }
+  .login-title-clbs{
+    font-size: 40px;
+    letter-spacing: 0.20em;
+    font-weight: 700;
+  }
+
+  .icon {
+    padding: 10px;
+    color: green;
+    min-width: 50px;
+    text-align: center;
+}
+.inner-addon{
+  position: relative;
+}
+
+.inner-addon .bi {
+  position: absolute;
+  padding: 10px;
+  /* pointer-events: none; */
+  cursor: pointer;
+}
+.right-addon .bi{
+  right: 0px;
+}
+.right-addon input{
+  padding-right: 30px;
+}
+  

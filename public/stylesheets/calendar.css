@@ -1,0 +1,78 @@
+
+#app-calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: [row1-start] 10% [row1-end];
+    height: 75vh;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.day{
+    border-left: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray);
+    text-align: center; 
+    padding-top: 5px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    transition: background-color 200ms, color 200ms;
+    
+}
+
+.name{
+    padding-bottom: 5px; 
+    /* border-bottom: 1px solid var(--light-gray);
+    border-right: 1px solid var(--light-gray); */
+    place-self: center;
+    text-align: center; 
+    padding-top: 5px; 
+    font-size: 24px; 
+    font-weight: 700;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+
+}
+
+.weekend{
+    color: var(--ryeblue); 
+}
+
+.selected{
+    background-color: var(--ryeblue) !important;
+    color: white;
+}
+
+
+.yesterday {
+    background-color: #ebedf1 !important;
+    color: black !important;
+}
+
+.today{
+    background-color: #d1dbe5 !important;
+    color: white;
+}
+
+#month{ 
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    margin: 0% 2%;
+    font-size: 3em;
+}
+.monthHeader{
+    text-align: center;
+    align-items: center;
+}
+.monthHeader button {
+    vertical-align: 0;
+}
+
+.btn-outline-dark{
+    border-color: white;
+}
+.btn-outline-dark:focus {
+    box-shadow: none;
+}

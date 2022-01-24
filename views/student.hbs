@@ -1,0 +1,39 @@
+<div class="header">{{>navbar}}</div>
+<div class="container bookTime">
+    <div class="row">
+        <div class="col">
+            <div class="yourbookings align-self-center">
+                <span id="">Your</span>
+                <br>
+                <spand id="">Bookings</span>
+            </div>
+
+        </div>
+        <div class="col btn-group-vertical rightsideHome">
+            <div class="stats">
+                <h1 id="helloUser">Hello, {{ loggedInUser }}</h1>
+
+                <span class="fontforHome ">
+                    Hours Booked: {{x}}
+                </span>
+                <br>
+                <span class="fontforHome ">
+                    Remaining Hours: {{y}}
+                </span>
+            </div>
+            <button type="button" class="btn btnforHome" name="bookbtn">
+                <span class="fontforHome">Book</span>
+            </button>
+            <button type="button" class="btn btnforHome" name="editbtn">
+                <span class="fontforHome">Edit</span>
+            </button>
+            <button type="button" class="btn btnforHome" name="cancelbtn">
+                <span class="fontforHome">Cancel</span>
+            </button>
+
+
+        </div>
+    </div>
+
+
+</div>
